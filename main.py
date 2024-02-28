@@ -31,7 +31,7 @@ def input_image_bytes(uploaded_file):
 
 # Initialize the Streamlit App
 st.set_page_config(layout="wide", page_title="ALGOSTATS CV")
-st.header('ALGOSTATS VISION - MultiLanguage Invoice Extractor')
+st.header('ALGOSTATS VISION - MULTILANGUAGE INVOICE EXTRACTOR')
 with st.sidebar:
     st.image("./logo.png",  use_column_width=True)
 input_prompt = """
@@ -44,6 +44,7 @@ if upload_image_file is not None:
     image = Image.open(upload_image_file)
     st.image(image, caption = "Uploaded Image", use_column_width=True)
 
+with st.sidebar:
 submit = st.button("ALGOSTATS CV RESPONSE")
 if submit:
     input_image_data = input_image_bytes(upload_image_file)
