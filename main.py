@@ -39,7 +39,7 @@ You are an expert in understanding invoices. Please try to answer the question u
 invoice.
 """
 user_input_prompt = st.text_input("USER INPUT PROMPT", key="input")
-upload_image_file = st.file_uploader("Choice an Image of the Invoice", type=["jpg", "jpeg", "png"])
+upload_image_file = st.file_uploader("Upload the Image of the Invoice", type=["jpg", "jpeg", "png"])
 if upload_image_file is not None:
     image = Image.open(upload_image_file)
     st.image(image, caption = "Uploaded Image", use_column_width=True)
