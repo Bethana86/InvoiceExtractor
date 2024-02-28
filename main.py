@@ -38,7 +38,7 @@ input_prompt = """
 You are an expert in understanding invoices. Please try to answer the question using the information from the uploaded
 invoice.
 """
-user_input_prompt = st.text_input("User Input Prompt", key="input")
+user_input_prompt = st.text_input("USER INPUT PROMPT", key="input")
 upload_image_file = st.file_uploader("Choice an Image of the Invoice", type=["jpg", "jpeg", "png"])
 if upload_image_file is not None:
     image = Image.open(upload_image_file)
