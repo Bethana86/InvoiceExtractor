@@ -41,18 +41,10 @@ if upload_image_file is not None:
     image = Image.open(upload_image_file)
     st.image(image, caption = "Uploaded Image", use_column_width=True)
 
-submit = st.button("Find the Answer from the Invoice")
+submit = st.button("ALGOSTATS-CV RESPONSE")
 if submit:
     input_image_data = input_image_bytes(upload_image_file)
     response = get_gemini_respone(input_prompt, input_image_data, user_input_prompt)
     st.subheader("Response")
     st.write(response)
     
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)    
