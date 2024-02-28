@@ -30,7 +30,9 @@ def input_image_bytes(uploaded_file):
         raise FileNotFoundError("No File Uploaded")
 
 # Initialize the Streamlit App
-st.set_page_config(page_title="MultiLanguage Invoice Extractor")
+page_icon = Image.open("./icon.png")
+st.set_page_config(layout="centered", page_title="ALGOSTATS IMAGE PROCESSOR", page_icon=page_icon)    
+st.set_page_config(page_title="ALGOSTATS MultiLanguage Invoice Extractor")
 input_prompt = """
 You are an expert in understanding invoices. Please try to answer the question using the information from the uploaded
 invoice.
@@ -41,10 +43,13 @@ if upload_image_file is not None:
     image = Image.open(upload_image_file)
     st.image(image, caption = "Uploaded Image", use_column_width=True)
 
-submit = st.button("ALGOSTATS-CV RESPONSE")
+# Sidebar       
+with st.sidebar:
+    st.image("./assets/sb-algostatsml.png",   use_column_width=True)  
+
+    submit = st.button("ALGOSTATS-CV RESPONSE")
 if submit:
     input_image_data = input_image_bytes(upload_image_file)
     response = get_gemini_respone(input_prompt, input_image_data, user_input_prompt)
     st.subheader("Response")
-    st.write(response)
-    
+    st.write(response)  
