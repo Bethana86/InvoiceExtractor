@@ -30,7 +30,7 @@ def input_image_bytes(uploaded_file):
         raise FileNotFoundError("No File Uploaded")
 
 # Initialize the Streamlit App
-st.set_page_config(layout="wide", page_title="ALGOSTATS CV", theme="dark")
+st.set_page_config(layout="wide", page_title="ALGOSTATS CV", page_icon="./logo.png")
 st.header('ALGOSTATS VISION - MULTILANGUAGE INVOICE EXTRACTOR')
 with st.sidebar:
     st.image("./logo.png",  use_column_width=True)
