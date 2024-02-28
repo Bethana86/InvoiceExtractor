@@ -30,7 +30,10 @@ def input_image_bytes(uploaded_file):
         raise FileNotFoundError("No File Uploaded")
 
 # Initialize the Streamlit App
-st.set_page_config(page_title="ALGOSTATS CV - MultiLanguage Invoice Extractor")
+st.set_page_config(layout="wide", page_title="ALGOSTATS CV")
+st.header('ALGOSTATS VISION - MultiLanguage Invoice Extractor')
+with st.sidebar:
+    st.image("./logo.png",  use_column_width=True)
 input_prompt = """
 You are an expert in understanding invoices. Please try to answer the question using the information from the uploaded
 invoice.
