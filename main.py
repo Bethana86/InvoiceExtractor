@@ -30,8 +30,7 @@ def input_image_bytes(uploaded_file):
         raise FileNotFoundError("No File Uploaded")
 
 # Initialize the Streamlit App
-page_icon = Image.open("./icon.png")
-st.set_page_config(layout="centered", page_title="ALGOSTATS IMAGE PROCESSOR", page_icon=page_icon)    
+st.set_page_config(page_title="ALGOSTATS IMAGE PROCESSOR")    
 input_prompt = """
 You are an expert in understanding invoices. Please try to answer the question using the information from the uploaded
 invoice.
