@@ -35,12 +35,12 @@ st.header('ALGOSTATS VISION - MULTILANGUAGE INVOICE EXTRACTOR')
 with st.sidebar:
     st.image("./logo.png",  use_column_width=True)
     st.sidebar.header(_("About this APP"))
-    st.sidebar.markdown(_(
-    "This is Computer Vision (Image Processing) Application shall be used for Invoice Content Extraction in P2P Invoice processing Indexing Process."))
-input_prompt = """
-You are an expert in understanding invoices. Please try to answer the question using the information from the uploaded
-invoice.
-"""
+    st.sidebar.markdown(_(    "This is Computer Vision (Image Processing) Application shall be used for Invoice Content Extraction in P2P Invoice processing Indexing Process."))
+    
+    input_prompt = """
+    You are an expert in understanding invoices. Please try to answer the question using the information from the uploaded
+    invoice.
+    """
 user_input_prompt = st.text_input("USER INPUT PROMPT", key="input")
 upload_image_file = st.file_uploader("Upload the Image of the Invoice", type=["jpg", "jpeg", "png"])
 if upload_image_file is not None:
