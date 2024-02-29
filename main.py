@@ -32,6 +32,11 @@ def input_image_bytes(uploaded_file):
 # Initialize the Streamlit App
 st.set_page_config(layout="wide", page_title="ALGOSTATS CV", page_icon="./logo.png")
 st.header('ALGOSTATS VISION - MULTILANGUAGE INVOICE EXTRACTOR')
+st.write(
+    """
+    Welcome to ALGOSTATS! ✨ This app serves as a Multilanguage Invoice Content Extractor, designed to facilitate the Indexing Process within the context of P2P (Procure-to-Pay) Invoice Processing Task Automation. ✨
+    """
+)
 with st.sidebar:
     st.image("./logo.png",  use_column_width=True)
     input_prompt = """
