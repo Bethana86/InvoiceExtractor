@@ -36,8 +36,7 @@ with st.sidebar:
     st.image("./logo.png",  use_column_width=True)
     st.sidebar.header(_("About this APP"))
     st.sidebar.markdown(_(
-    "This is Computer Vision (Image Processing) Application shall be used for Invoice Content Extraction in P2P Invoice processing Indexing Process."
-))
+    "This is Computer Vision (Image Processing) Application shall be used for Invoice Content Extraction in P2P Invoice processing Indexing Process."))
 input_prompt = """
 You are an expert in understanding invoices. Please try to answer the question using the information from the uploaded
 invoice.
